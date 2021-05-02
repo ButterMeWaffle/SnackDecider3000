@@ -1,0 +1,226 @@
+.StockBlock {
+    background-image: url('../../../assets/images/geo.jpg');
+    background-size:cover;
+}
+.StockImageBlock img {
+    width:300px;
+    /* float:left; */
+}
+/* .StockImageBlock p{
+    float:left;
+} */
+.StockImageBlock .VoteDisplay {
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right:4px;
+}
+.StockImageBlock .VoteDisplayBox {
+    position:absolute;
+    display:table;
+    top:0;
+    right:0;
+    width: 0;
+    height: 0;
+    margin:5px 5px 0px 0px;
+    border-top: 40px solid #528fa1;
+    border-left: 40px solid transparent;
+    color:white;
+  }
+  .mat-card {
+    background-color:white;
+    padding:0px 0px 0px 0px;
+    color:#528fa1;
+    border-radius: 0px;
+  }
+  .mat-card-subtitle {
+    color:#528fa1;
+  }
+  .mat-card-header .mat-card-title {
+      font-size:15px;
+      margin-top:5px;
+  }
+  .VoteCount {
+      margin-left:auto;
+      text-align: right;
+  }
+
+  .VotingBox {
+      background-color:gray;
+  }
+  .VotingBoxHead {
+      background-color: #3e8b9f;
+      display:flex;
+  }
+  .VotingBoxHead.SectionTwo {
+    background-color: white;
+    border-bottom:1px;
+    border-color:black;
+    border-style:solid
+  }
+  .VotingBoxHead.SectionTwo h1 {
+    color:#6f6d70;
+  }
+  .VotingBoxHead h1 {
+      margin:5px;
+      color:white;
+      font-size: 30px;
+  }
+  .VotingBoxHead .VoteCount {
+      padding:12px 15px 5px 5px;
+      text-align: right;
+  }
+  .VotingBoxHead.SectionTwo .VoteCount span {
+    display: block;
+    height: 22px;
+    width: 22px;
+    line-height: 20px;
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+    background-color: #3e8b9f;
+    color:white;
+    text-align: center;
+    font-size: 18px;
+    margin-left:auto;
+    }
+  .VoteCount span {
+    display: block;
+    height: 22px;
+    width: 22px;
+    line-height: 20px;
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+    background-color: white;
+    color:#3e8b9f;
+    text-align: center;
+    font-size: 18px;
+    margin-left:auto;
+    }
+  .mat-button.VoteBtn {
+      font-size:30px;
+      padding:0px;
+      height:50px;
+      background-color:#c4c4c4;
+      max-width: 50px;
+      float:left;
+      border-radius:0px;
+      color:white;
+  }
+  .VotingBox .mat-list-base .mat-list-item .mat-list-item-content {
+      padding: 0px;
+  }
+  .VotingBoxHead .grid-col {
+      padding:0px;
+  }
+  .VotingBoxItem {
+      display:flex;
+      border-radius:0px;
+      color:#777578;
+  }
+  .VotingBoxItem p {
+      float:left;
+      height: 20px;
+      margin-top: 15px;
+      padding-left:25px;
+  }
+  .VotingBoxItem .VoteCount {
+    float:left;
+    height: 20px;
+    margin-top: 15px;
+    margin-right:8px;
+    font-size:15px;
+}
+.VotingBoxItem.SectionTwo {
+    background-color:white;
+}
+.mat-form-field {
+    margin-right: 8px;
+  }
+  .StockImageBox {
+    display: flex;
+    width: 300px;
+    height: 240px;
+    background-color:white;
+    max-width: 300px;
+  }
+  .StockImageBox img {
+    object-fit: contain;
+    padding: 20px;
+    max-width:250px;
+    margin-left:auto;
+    margin-right: auto;
+  }
+  .productName {
+    margin:10px 0px 3px 0px;
+    font-size: 18px;
+  }
+  .card {
+    padding:0px 0px 0px 0px;
+    color:#528fa1;
+    border-radius: 0px;
+    position:relative;
+  }
+  .card p {
+    color:white;
+  }
+  .subTitle {
+    font-size:20px;
+  }
+  /* START mobile cards START */
+  .mobileCard .StockImageBox {
+    width: 40vw;
+    height: 35vw;
+    max-width: none;
+  }
+  .mobileCard .StockImageBox img {
+    padding: 20px;
+    max-width:75%;
+  }
+  .mobileCard .productName {
+    margin:10px 0px 3px 0px;
+    font-size: 12px;
+    width: 200px;
+  }
+  .mobileCard .productBrand {
+    font-size:11px;
+  }
+   /* END mobile cards END */
+  /* testing */
+  .StockImageBox2 {
+    display: flex;
+    width: 300px;
+    height: 175px;
+    background-color:white;
+    max-width: 300px;
+  }
+  .StockImageBox2 img {
+    object-fit: contain;
+    padding: 20px;
+    max-width:250px;
+    margin-left:auto;
+    margin-right: auto;
+  }
+  .StockImageBlock2 .VoteDisplay2 {
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right:4px;
+}
+.StockImageBlock2 .VoteDisplayBox2 {
+    position:absolute;
+    display:table;
+    top:0;
+    right:0;
+    width: 0;
+    height: 0;
+    margin:5px 5px 0px 0px;
+    border-top: 40px solid #528fa1;
+    border-left: 40px solid transparent;
+    color:white;
+  }
+  
+  
+  /* I wouldnt normaly use a name like this, just having a bit of fun :) */
+  .BigBoyFont {
+      font-size:40px;
+  }
