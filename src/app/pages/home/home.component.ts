@@ -7,27 +7,11 @@ import { ErrorVotesComponent } from '../../components/error-votes/error-votes.co
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CookieService } from 'ngx-cookie';
 import { NgxSpinnerService } from "ngx-spinner";
-import { trigger, state, style, animate, transition, AUTO_STYLE } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  animations: [
-    trigger('collapse', [
-      state('false', style({
-        height: AUTO_STYLE,
-        visibility: AUTO_STYLE
-      })),
-      state('true', style({
-        height: '0',
-        visibility: 'hidden'
-      })),
-      transition('false => true', animate('500ms ease-in')),
-      transition('true => false', animate('500ms ease-out'))
-    ])
-  ]
-
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
@@ -105,6 +89,7 @@ export class HomeComponent implements OnInit {
     this.setBreakPoint(event.target.innerWidth);
   }
 
+  //set how many cols we want for our grid list based on screen size
   setBreakPoint(Width: number) {
     if (Width <= 580) {
       this.breakpoint = 1
@@ -115,6 +100,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  //get the cookie containing or voted on snacks, if it doesnt exist create it
   getVotedSnacksCookie() {
     let Cookie: any = this.cookieService.get("VotedSnacks")
     if (Cookie) {
@@ -127,11 +113,13 @@ export class HomeComponent implements OnInit {
 
   }
 
+  //save our voted on snacks cookie with a exp of the start of next month
   setVotedSnacksCookie() {
     var now = new Date();
     this.cookieService.put("VotedSnacks", JSON.stringify(this.SelectedSnacks), { expires: new Date(now.getFullYear(), now.getMonth() + 1, 0) });
   }
 
+  // general error snack
   ShowGeneralError() {
     this.snackBar.openFromComponent(ErrorSnackComponent, {
       duration: 5000,

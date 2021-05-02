@@ -47,10 +47,10 @@
                 </span>
             </button>
             <nav class="hList" *ngIf="breakpoint == 3">
-                <a class="navLink" href="#">Home</a>
-                <a class="navLink" href="#">Current</a>
-                <a class="navLink" href="#">Voting</a>
-                <a class="navLink" href="#">Sign Up</a>
+                <a class="navLink" (click)="scroll(TopBlock)">Home</a>
+                <a class="navLink" (click)="scroll(StockBlock)">Current</a>
+                <a class="navLink" (click)="scroll(VoteBlock)" >Voting</a>
+                <a class="navLink" (click)="scroll(SignUpBlock)" >Sign Up</a>
             </nav>
             <div class="mobileMenu" *ngIf="collapse && breakpoint < 3">
                 <a class="logo">
@@ -59,15 +59,15 @@
                     </svg>
                 </a>
                 <nav class="mobileMenuNav">
-                    <a class="navLink" href="#">Home</a>
-                    <a class="navLink" href="#">Current</a>
-                    <a class="navLink" href="#">Voting</a>
-                    <a class="navLink" href="#">Sign Up</a>
+                    <a class="navLink" (click)="scroll(TopBlock)">Home</a>
+                    <a class="navLink" (click)="scroll(StockBlock)">Current</a>
+                    <a class="navLink" (click)="scroll(VoteBlock)" >Voting</a>
+                    <a class="navLink" (click)="scroll(SignUpBlock)" >Sign Up</a>
                 </nav>
             </div>
         </div>
     </div>
-    <div class="site-bd">
+    <div class="site-bd" #TopBlock>
         <div class="site-bd-section">
             <div class="heroBanner">
                 <div class="heroBanner-content u-constrainer">
@@ -88,7 +88,7 @@
             </div>
         </div>
         <!-- Currently in stock block -->
-        <div class="StockBlock" *ngIf="Snacks.length">
+        <div class="StockBlock" [hidden]="!Snacks.length" #StockBlock>
             <div class="u-constrainer">
                 <div class="layoutPanel">
                     <!-- Title -->
@@ -116,25 +116,6 @@
                             </div>
                         </mat-grid-tile>
                     </mat-grid-list>
-                    <!-- <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)">
-                        <mat-grid-tile class="StockImageBlock" *ngFor="let snack of Snacks; index as i;">
-                            <mat-card class="example-card">
-                                <mat-card-header>
-                                    <mat-card-title>{{snack.product}}</mat-card-title>
-                                    <mat-card-subtitle>{{snack.brand}}</mat-card-subtitle>
-                                </mat-card-header>
-
-                                <mat-card-content>
-                                    <div class="StockImageBox">
-                                        <img class="images" [src]="snack.image" />
-                                    </div>
-                                    <div class="VoteDisplayBox">
-                                        <p class="VoteDisplay">{{snack.votes}}</p>
-                                    </div>
-                                </mat-card-content>
-                            </mat-card>
-                        </mat-grid-tile>
-                    </mat-grid-list> -->
                 </div>
             </div>
         </div>
@@ -146,8 +127,8 @@
                     <div class="layoutPanel-hd">
                         <div class="layoutPanel-hd-title">
                             <h1 class="hdg hdg_1 mix-hdg_dark BigBoyFont">Snack Voting</h1>
-                            <p class="hdg mix-hdg_dark subTitle lighterWeightFont">Here are the snack that are available in the Nerdery kitchen
-                                now.</p>
+                            <p class="hdg mix-hdg_dark subTitle lighterWeightFont underline">Vote on the snacks you want to see in this month's rotation</p>
+                            <hr class="solid">
                             <p class="hdg mix-hdg_dark subTitle lighterWeightFont" *ngIf="SelectedSnacks.length != 3">{{MaxVotes -
                                 SelectedSnacks.length}} Votes Remaining</p>
                             <p class="hdg mix-hdg_dark subTitle lighterWeightFont" *ngIf="SelectedSnacks.length == 3">You Are Out Of Votes!</p>
@@ -208,7 +189,7 @@
                     </div>
             </div>
             <!-- Sign up block -->
-            <div class="site-bd-section site-bd-section_gray">
+            <div class="site-bd-section site-bd-section_gray" #SignUpBlock>
                 <div class="u-constrainer">
                     <div class="layoutPanel">
                         <div class="layoutPanel-hd">

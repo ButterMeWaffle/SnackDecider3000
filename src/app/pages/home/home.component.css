@@ -166,6 +166,9 @@
   .subTitle {
     font-size:20px;
   }
+  hr.solid {
+    width:25%;
+  }
   /* START mobile cards START */
   .mobileCard .StockImageBox {
     width: 40vw;

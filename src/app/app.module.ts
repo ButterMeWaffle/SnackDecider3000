@@ -14,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
   // Pages
   import { HomeComponent } from './pages/home/home.component';
-  import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+
   // Components
   import { HeaderComponent } from './components/header/header.component';
   import { FooterComponent } from './components/footer/footer.component';
@@ -40,7 +40,6 @@ import { NgxSpinnerModule } from "ngx-spinner";
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent,
     KonamiDirective,
     ErrorSnackComponent,
     ErrorVotesComponent,
